@@ -29,12 +29,10 @@ body,
 .modal-wrapper {
     flex-direction: column;
     padding: 30px 10px;
-    gap: 20px;
 }
 
 .wrapper {
     width: 90%;
-    max-width: 600px;
 }
 
 .modal {
@@ -47,8 +45,8 @@ body,
     right: 0;
     height: 100vh;
     z-index: 9999;
-    align-items: center;
     transition: height .8s ease;
+    padding-top: 20px;
 }
 
 .modal-wrapper {
@@ -67,7 +65,7 @@ body,
 .logo {
     width: 70%;
     max-width: 300px;
-    margin: auto;
+    margin: 10px auto 30px;
 }
 
 /* typography */
@@ -75,22 +73,35 @@ body,
 h1 {
     margin: 0;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
+h2 {
+    text-align: center;
+    margin: 20px;
+}
 /* form elements */
 
 input,
 select,
-#submit {
+#submit,
+#clear-btn {
     padding: 18px 10px;
     border-radius: 4px;
     outline: none;
-    border: 1px solid var(--black)
+    border: 1px solid var(--black);
+    margin: 10px 0 20px;
 }
 
-#submit {
+#submit,
+#clear-btn {
     background-color: var(--light-black);
     color: var(--white);
     cursor: pointer;
     padding: 18px 10px;
+}
+
+label {
+    text-align: center;
 }
