@@ -1,55 +1,96 @@
-body {
-    background-color: #DFEBEB;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root {
+    --white: #fff;
+    --black: #000;
+    --light-black: #323030;
+    --light-grey: #f3f3f3;
+    /* --heading-font: "Lilita One", sans-serif; */
+    --text-font: "Lato", sans-serif;;
+}
+
+/* Main section styles */
+
+body,
+.wrapper,
+.modal,
+.modal-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    font-family: var(--text-font);
+}
+
+.wrapper,
+.modal-wrapper {
+    flex-direction: column;
+    padding: 30px 10px;
+    gap: 20px;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 600px;
+}
+
+.modal {
+    width: 100%;
+    background-color: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.card {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 400px;
-    border: 1px solid black;
-    background: linear-gradient(
-        to bottom,
-        #fcf9be,
-        #fcf9be 20px,
-        #97ecf1 1px,
-        #fcf9be
-    );
-    background-size: 100% 21px;
-    padding: 20px;
-    font-size: 2rem;
-    box-shadow: 0 2px 3px black;
-    line-height: 42px;
-}
-
-.one {
-    rotate: 1deg;
     z-index: 9999;
+    align-items: center;
+    transition: height .8s ease;
 }
-.two {
-    rotate: -2deg;
-    z-index: 4;
-    translate: 50px;
+
+.modal-wrapper {
+    background-color: var(--white);
+    width: 90%;
+    max-width: 600px;
+    height: 500px;
 }
-.three {
-    rotate: 4deg;
-    z-index: 3;
-    translate: -50px 40px;
+
+.hide {
+    display: none;
 }
-.four {
-    rotate: -3deg;
-    z-index: 2;
-    translate: 30px -40px;
+
+/* images */
+
+.logo {
+    width: 70%;
+    max-width: 300px;
+    margin: auto;
 }
-.four {
-    rotate: 5deg;
-    z-index: 1;
-    translate: 20px 60px;
+
+/* typography */
+
+h1 {
+    margin: 0;
+    text-align: center;
+}
+
+/* form elements */
+
+input,
+select,
+#submit {
+    padding: 18px 10px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--black)
+}
+
+#submit {
+    background-color: var(--light-black);
+    color: var(--white);
+    cursor: pointer;
+    padding: 18px 10px;
 }
